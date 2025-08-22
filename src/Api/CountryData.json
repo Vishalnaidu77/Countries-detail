@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 125800000,
+    "interestingFact": "Japan has more than 6,800 islands."
+  },
+  {
+    "id": 2,
+    "countryName": "Brazil",
+    "capital": "Brasília",
+    "population": 214300000,
+    "interestingFact": "Brazil is home to about 60% of the Amazon rainforest."
+  },
+  {
+    "id": 3,
+    "countryName": "Egypt",
+    "capital": "Cairo",
+    "population": 109300000,
+    "interestingFact": "Egypt is home to the only surviving ancient wonder: the Great Pyramid of Giza."
+  },
+  {
+    "id": 4,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 39500000,
+    "interestingFact": "Canada has the longest coastline in the world."
+  },
+  {
+    "id": 5,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 26000000,
+    "interestingFact": "Australia is home to more kangaroos than people."
+  },
+  {
+    "id": 6,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1428000000,
+    "interestingFact": "India is the world’s largest democracy."
+  },
+  {
+    "id": 7,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 68000000,
+    "interestingFact": "France is the most visited country in the world."
+  },
+  {
+    "id": 8,
+    "countryName": "South Africa",
+    "capital": "Pretoria (administrative)",
+    "population": 60900000,
+    "interestingFact": "South Africa has three capital cities: Pretoria, Cape Town, and Bloemfontein."
+  },
+  {
+    "id": 9,
+    "countryName": "Mexico",
+    "capital": "Mexico City",
+    "population": 127500000,
+    "interestingFact": "Chocolate originated in Mexico, where the ancient Mayans and Aztecs cultivated cacao."
+  },
+  {
+    "id": 10,
+    "countryName": "Italy",
+    "capital": "Rome",
+    "population": 59000000,
+    "interestingFact": "Italy has more UNESCO World Heritage sites than any other country."
+  }
+]

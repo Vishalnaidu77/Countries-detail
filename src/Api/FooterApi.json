@@ -1,0 +1,17 @@
+[
+  {
+    "head": "findUs:",
+    "icon": "FaLocationDot", 
+    "via": "123 Global Street, World City, Earth"
+  },
+     {
+    "head": "callUs:",
+    "icon": "MdAddIcCall", 
+    "via": "+1-234-567-8900"
+  },
+    {
+    "head": "mailUs:",
+    "icon": "IoIosMail ", 
+    "via": "contact@globalinfo.org"
+  }
+]
