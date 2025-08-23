@@ -38,13 +38,13 @@ const Country = () => {
   // Loading Component
   if (isPending) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 pt-16">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Loading Header */}
           <div className="text-center mb-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent mb-4"></div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">Loading Countries...</h1>
-            <p className="text-gray-600">Discovering amazing places around the world</p>
+            <h1 className="text-3xl font-bold text-white mb-2">Loading Countries...</h1>
+            <p className="text-zinc-400">Discovering amazing places around the world</p>
           </div>
 
           {/* Loading Skeleton */}
@@ -70,40 +70,7 @@ const Country = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Hero Section */}
-      <div className="pt-16 pb-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center py-12">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              Discover <span className="text-yellow-300">Countries</span>
-            </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Explore detailed information about {countries.length} countries from around the world
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">{countries.length}</div>
-                <div className="text-sm text-blue-100">Countries</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">7</div>
-                <div className="text-sm text-blue-100">Continents</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">{filterCountries.length}</div>
-                <div className="text-sm text-blue-100">Filtered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-300">∞</div>
-                <div className="text-sm text-blue-100">Adventures</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900">
 
       {/* Search and Filter */}
       <SearchFilter 
@@ -115,53 +82,7 @@ const Country = () => {
         setContries={setContries}
       />
 
-      {/* View Mode Toggle */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-600">
-                Showing {filterCountries.length} of {countries.length} countries
-              </span>
-              {(search || filter !== "All") && (
-                <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
-                  Filtered results
-                </span>
-              )}
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  viewMode === 'grid' 
-                    ? 'bg-blue-500 text-white shadow-lg' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  viewMode === 'list' 
-                    ? 'bg-blue-500 text-white shadow-lg' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Countries Grid/List */}
-      <section className="py-12">
+      <section className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 mt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filterCountries.length === 0 ? (
             /* No Results */
@@ -209,7 +130,7 @@ const Country = () => {
       {/* Back to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
+        className="fixed bottom-8 right-8 bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-full cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
         aria-label="Back to top"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

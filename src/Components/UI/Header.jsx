@@ -18,25 +18,25 @@ const Header = () => {
   }
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/90 backdrop-blur-lg shadow-lg border-b border-white/20' 
-        : 'bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-sm'
-    }`}>
+   <header className={`fixed top-0 left-0 right-0 z-50 py-3 pb-0 transition-all duration-300 ${
+  isScrolled 
+    ? 'bg-white/20 backdrop-blur-sm' 
+    : 'bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 backdrop-blur-sm'
+}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <NavLink to='/' className="text-2xl font-bold hover:scale-105 transition-transform">
-              <span className={`${isScrolled ? 'text-blue-600' : 'text-white'}`}>World</span>
-              <span className={`bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent`}>
+              <span className='text-white'>World</span>
+              <span className={`bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent`}>
                 Atlas
               </span>
             </NavLink>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex space-x-2">
             {[
               { to: '/', label: 'Home' },
               { to: '/about', label: 'About' },
@@ -49,8 +49,8 @@ const Header = () => {
                 className={({ isActive }) => `
                   px-4 py-2 rounded-lg font-medium transition-all duration-300 relative group
                   ${isActive 
-                    ? (isScrolled ? 'text-blue-600 bg-blue-50' : 'text-white bg-white/20') 
-                    : (isScrolled ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50' : 'text-white/80 hover:text-white hover:bg-white/10')
+                    ? (isScrolled ? 'text-zinc-600 bg-blue-50' : 'text-white bg-white/20') 
+                    : (isScrolled ? 'text-white hover:text-zinc-600 hover:bg-white' : 'text-white/80 hover:text-white hover:bg-white/20')
                   }
                 `}
               >

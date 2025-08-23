@@ -1,7 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const SearchFilter = ({ search, setSearch, filter, setFilter, countries, setContries }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleInput = (e) => {
     setSearch(e.target.value)
@@ -29,7 +38,11 @@ const SearchFilter = ({ search, setSearch, filter, setFilter, countries, setCont
   const regions = ["All", "Asia", "Europe", "Americas", "Africa", "Oceania", "Antarctic"]
 
   return (
-    <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-lg border-b border-gray-200/50 shadow-sm">
+    <div className={`fixed left-0 right-0 z-50 py-3 pt-0 transition-all duration-300 ${
+  isScrolled 
+    ? 'bg-white/20 backdrop-blur-sm shadow-lg top-[60px]' // Reduced top value
+    : 'bg-gradient-to-br from-zinc-700 via-zinc-900 to-zinc-800 backdrop-blur-sm top-[60px]'
+}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         
         {/* Mobile Layout */}

@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500">
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900">
         <div 
           className="absolute inset-0 opacity-30"
           style={{
@@ -57,9 +57,9 @@ const Home = () => {
             {/* Left Content */}
             <div className="text-center lg:text-left space-y-8 animate-fade-in">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mt-10">
                   Explore the world,
-                  <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
                     One Country at a Time
                   </span>
                 </h1>
@@ -73,7 +73,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={handleExploreClick}
-                  className="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center gap-3"
+                  className="group bg-zinc-100 text-zinc-800 px-6 py-3 rounded-full font-semibold text-md hover:bg-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl inline-flex items-center justify-center gap-3"
                 >
                   Start Exploring
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,12 +81,7 @@ const Home = () => {
                   </svg>
                 </button>
                 
-                <button className="group border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-3">
-                  Learn More
-                  <svg className="w-5 h-5 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </button>
+
               </div>
 
               {/* Stats */}
@@ -110,7 +105,7 @@ const Home = () => {
             <div className="flex justify-center lg:justify-end animate-float">
               <div className="relative">
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full blur-3xl opacity-30 scale-110"></div>
+                <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl opacity-30 scale-110"></div>
                 
                 {/* Image Container */}
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-full p-8 border border-white/20">
@@ -126,9 +121,9 @@ const Home = () => {
                 </div>
                 
                 {/* Orbiting Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full shadow-lg animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-400 rounded-full shadow-lg animate-bounce delay-500"></div>
-                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-green-400 rounded-full shadow-lg animate-bounce delay-1000"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full shadow-lg animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white rounded-full shadow-lg animate-bounce delay-500"></div>
+                <div className="absolute top-1/2 -left-8 w-4 h-4 bg-white rounded-full shadow-lg animate-bounce delay-1000"></div>
               </div>
             </div>
           </div>
