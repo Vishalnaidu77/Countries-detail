@@ -254,3 +254,8 @@ html {
 .notification-badge {
   position: relative;
 }
+
+
+button{
+  cursor: pointer;
+}

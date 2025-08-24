@@ -38,13 +38,13 @@ const Country = () => {
   // Loading Component
   if (isPending) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 pt-16">
+      <div className="min-h-screen bg-gradient-to-br from-zinc-900 to-zinc-800 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Loading Header */}
           <div className="text-center mb-12">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent mb-4"></div>
             <h1 className="text-3xl font-bold text-white mb-2">Loading Countries...</h1>
-            <p className="text-zinc-400">Discovering amazing places around the world</p>
+            <p className="text-zinc-300">Discovering amazing places around the world</p>
           </div>
 
           {/* Loading Skeleton */}
@@ -70,7 +70,40 @@ const Country = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
+      {/* Hero Section */}
+      <div className="pt-16 pb-8 bg-gradient-to-r from-zinc-800 to-zinc-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center py-12">
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+              Discover <span className="text-yellow-400">Countries</span>
+            </h1>
+            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+              Explore detailed information about {countries.length} countries from around the world
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">{countries.length}</div>
+                <div className="text-sm text-zinc-300">Countries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">7</div>
+                <div className="text-sm text-zinc-300">Continents</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">{filterCountries.length}</div>
+                <div className="text-sm text-zinc-300">Filtered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-400">∞</div>
+                <div className="text-sm text-zinc-300">Adventures</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Search and Filter */}
       <SearchFilter 
@@ -82,7 +115,10 @@ const Country = () => {
         setContries={setContries}
       />
 
-      <section className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 mt-32">
+      
+
+      {/* Countries Grid/List */}
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {filterCountries.length === 0 ? (
             /* No Results */
@@ -130,7 +166,7 @@ const Country = () => {
       {/* Back to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-full cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
+        className="fixed bottom-8 right-8 bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
         aria-label="Back to top"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

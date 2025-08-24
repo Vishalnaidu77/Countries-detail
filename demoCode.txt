@@ -52,3 +52,14 @@ const CountryCard = ({ country }) => {
 }
 
 export default CountryCard
+
+
+
+
+
+
+<header className={`fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300 ${
+  isScrolled 
+    ? 'bg-gradient-to-b from-white/20 to-white/20 backdrop-blur-sm' 
+    : 'bg-gradient-to-b from-zinc-900 via-zinc-700 to-zinc-700 backdrop-blur-sm'
+}`}>

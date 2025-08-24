@@ -6,31 +6,32 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const handleScroll = () => {
+    const halfViewportHeight = window.innerHeight * 0.5
+    setIsScrolled(window.scrollY > halfViewportHeight)
+  }
+  window.addEventListener('scroll', handleScroll)
+  return () => window.removeEventListener('scroll', handleScroll)
+}, [])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   return (
-   <header className={`fixed top-0 left-0 right-0 z-50 py-3 pb-0 transition-all duration-300 ${
-  isScrolled 
-    ? 'bg-white/20 backdrop-blur-sm' 
-    : 'bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900 backdrop-blur-sm'
-}`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 py-3 bg-gradient-to-b from-zinc-900 via-zinc-700 to-zinc-700 backdrop-blur-sm transition-all duration-300 ${
+        isScrolled 
+          ? ' absolute top-[-200px] left-0 right-0 ' 
+          : ' absolute top-0 left-0 right-0 '
+      }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <NavLink to='/' className="text-2xl font-bold hover:scale-105 transition-transform">
-              <span className='text-white'>World</span>
+              <span className='text-white'>Globe</span>
               <span className={`bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent`}>
-                Atlas
+                Quest
               </span>
             </NavLink>
           </div>

@@ -85,8 +85,8 @@ const Footer = () => {
             <div className="lg:col-span-1 space-y-6">
               <div>
                 <h2 className="text-3xl font-bold">
-                  <span className="text-white">World</span>
-                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Atlas</span>
+                  <span className="text-white">Globe</span>
+                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Quest</span>
                 </h2>
                 <p className="text-gray-400 mt-4 leading-relaxed">
                   Discover the world through comprehensive country data. Your gateway to exploring nations, cultures, and geographical wonders.
@@ -187,17 +187,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Back to Top Button */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="absolute bottom-6 right-6 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-          aria-label="Back to top"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
-        </button>
       </div>
     </footer>
   )

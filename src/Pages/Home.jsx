@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-700 to-zinc-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
         <div 
           className="absolute inset-0 opacity-30"
           style={{
