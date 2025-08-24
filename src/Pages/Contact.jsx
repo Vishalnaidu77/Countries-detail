@@ -157,7 +157,7 @@
                         required
                         autoComplete="name"
                         placeholder="Enter your full name"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white"
+                        className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white"
                       />
                     </div>
 
@@ -175,7 +175,7 @@
                         required
                         autoComplete="email"
                         placeholder="Enter your email address"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white"
+                        className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white"
                       />
                     </div>
 
@@ -192,7 +192,7 @@
                         rows="6"
                         required
                         placeholder="Tell us how we can help you..."
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-1 focus:ring-yellow-500 focus:border-transparent outline-none transition-all duration-300 bg-gray-50 hover:bg-white focus:bg-white resize-none"
                       ></textarea>
                     </div>
 
