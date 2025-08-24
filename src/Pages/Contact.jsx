@@ -111,7 +111,7 @@
 
               {/* Social Links */}
               <div className="pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
                 <div className="flex gap-4">
                   {[
                     { name: 'Twitter', color: 'bg-blue-400 hover:bg-blue-500' },

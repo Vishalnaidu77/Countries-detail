@@ -112,7 +112,7 @@ const Country = () => {
         filter={filter} 
         setFilter={setFilter} 
         countries={countries} 
-        setContries={setContries}
+        setCountries={setContries}
       />
 
       

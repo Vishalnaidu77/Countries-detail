@@ -66,7 +66,7 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               className={`p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50' : 'text-white hover:bg-white/10'
+                isScrolled ? 'text-gray-600 hover:text-yellow-600 hover:bg-blue-50' : 'text-white hover:bg-white/10'
               }`}
             >
               <svg className={`w-6 h-6 transition-transform duration-300 ${isMenuOpen ? 'rotate-180' : ''}`} 
@@ -97,8 +97,8 @@ const Header = () => {
                   className={({ isActive }) => `
                     px-4 py-3 rounded-lg font-medium transition-all duration-300
                     ${isActive 
-                      ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600' 
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover:border-l-4 hover:border-blue-200'
+                      ? 'text-yellow-500 bg-blue-50 border-l-4 border-yellow-600' 
+                      : 'text-gray-600 hover:text-yellow-600 hover:bg-yellow-50 hover:border-l-4 hover:border-yellow-200'
                     }
                   `}
                 >

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const SearchFilter = ({ search, setSearch, filter, setFilter, countries, setContries }) => {
+const SearchFilter = ({ search, setSearch, filter, setFilter, countries, setCountries }) => {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   const handleInput = (e) => {
@@ -18,7 +18,7 @@ const SearchFilter = ({ search, setSearch, filter, setFilter, countries, setCont
         ? a.name.common.localeCompare(b.name.common) 
         : b.name.common.localeCompare(a.name.common)
     })
-    setContries(sortCountry)
+    setCountries(sortCountry)
   }
 
   const clearFilters = () => {
